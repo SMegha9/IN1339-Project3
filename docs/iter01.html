@@ -1,0 +1,37 @@
+<html>
+<head>
+<script>
+function fibonacci (fibnumber) {
+     //if number is 1 or 2  just return 1
+    console.log(fibnumber)
+    console.log("hello")
+    var sum
+    if (fibnumber==1||fibnumber==2){return 1}
+    
+    else
+        {
+            return (fibonacci(fibnumber-1) + fibonacci(fibnumber-2))
+        }
+     //otherwise return sum of fibonacci of previous two numbers
+     }
+
+function compute_and_display () {
+     // get the value from the input
+    var numf = document.getElementById("fibnum").value
+   
+    var result= fibonacci(numf)
+    document.getElementById("output_goes_here").innerHTML=result
+     //result = fibonacci(input)
+     //display result on the webpage
+     }
+
+</script>
+</head>
+<body>
+
+  <input type="number" id="fibnum" value="4">
+    <button type="button" value="Submit" onclick="compute_and_display()">Submit</button>
+
+<p id="output_goes_here">??</p>
+</body>
+</html>
